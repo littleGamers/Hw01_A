@@ -5,12 +5,12 @@ using UnityEngine;
 public class spaceHide : MonoBehaviour
 {
     // Keep our renderer because it controls the object's visibility.
-    SpriteRenderer render;
+    SpriteRenderer renderer;
 
     void Start()
     {
         // Get the SpriteRenderer from the object:
-        render = GetComponent<SpriteRenderer>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -19,7 +19,7 @@ public class spaceHide : MonoBehaviour
         // In other words, SPACE is used to Show/Hide the object.
         if (Input.GetKeyDown(KeyCode.Space))
         {
-                render.enabled = !render.enabled;
+            renderer.enabled = !renderer.enabled;
         }
     }
 }
